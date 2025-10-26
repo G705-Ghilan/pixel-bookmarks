@@ -112,7 +112,8 @@ a {
 .hero-image {
   width: 90%;
   height: 85vh;
-   background-image: url("https://raw.githubusercontent.com/G705-Ghilan/pixel-bookmarks/refs/heads/main/assets/images/hero-image.png");
+
+  background-image: url("https://raw.githubusercontent.com/G705-Ghilan/pixel-bookmarks/refs/heads/main/assets/images/hero-image-low.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
