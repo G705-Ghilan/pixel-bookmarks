@@ -127,6 +127,7 @@ hr {
   max-width: 1200px;
   margin: 0px auto;
   transition: 0.2s;
+  gap: 20px;
 }
 #navbar li {
   display: flex;
