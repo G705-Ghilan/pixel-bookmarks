@@ -381,4 +381,7 @@ hr {
     top: 0;
     z-index: 1000;
   }
+  #navbar ul li:nth-child(3){
+    display: none;
+  }
 }
