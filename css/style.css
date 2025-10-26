@@ -77,9 +77,14 @@ a {
 
 /* Globals */
 hr {
-  max-width: 1200px;
   margin: 0px 40px;
   border: 1px solid var(--card-border);
+  
+}
+
+
+body:not(.dark-theme) hr {
+  display: none;
 }
 .container {
   max-width: 1200px;
