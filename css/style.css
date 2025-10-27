@@ -1,31 +1,25 @@
 :root {
-
   --bg-color: #ffffff;
   --text-color: #131316;
-  --muted: rgba(0, 0, 0, 0.622); 
-  --heavy-text-color: rgba(0, 0, 0, 0.698); 
-  --nav-bg: #ffffff;
+  --muted: rgba(0, 0, 0, 0.622);
+  --heavy-text-color: rgba(0, 0, 0, 0.698);
+  --nav-bg: #ffffffd6;
   --nav-underline: #000000;
   --card-bg: #252424;
-  --card-border: #4d4d4d8e; 
+  --card-border: #4d4d4d8e;
   --rating-bg: #f5f7fb;
   --rating-border: rgba(232, 234, 238, 0.52);
   --inverse-text: #ffffff;
-  --dark-container: #000000; 
-  --dark-button: #000000; 
+  --dark-container: #000000;
+  --dark-button: #000000;
+  --always-dark-button: #000000;
   --primary-color: #57ad90;
   --toggle-hover: #ececec;
   --toggle-active: #dbdada;
   --bookmark-start: #57ad90;
   --bookmark-end: #bcc55a;
-  --muted-inverse: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); 
+  --muted-inverse: rgba(255, 255, 255, 0.8);
 }
-
 
 body.dark-theme {
   --bg-color: #0f1112;
@@ -33,12 +27,12 @@ body.dark-theme {
   --inverse-color: #e1e1e7;
   --muted: rgba(255, 255, 255, 0.62);
   --heavy-text-color: rgba(227, 217, 217, 0.698);
-  --nav-bg: #0b0b0b;
+  --nav-bg: #0f1112d6;
   --nav-underline: #e1e1e7;
   --card-bg: #1b1b1b;
   --card-border: #252525;
   --rating-bg: #141518;
-  --dark-button: #2e2e2e; 
+  --dark-button: #2e2e2e;
   --rating-border: rgba(255, 255, 255, 0.08);
 
   --dark-container: #0f1112;
@@ -79,9 +73,7 @@ a {
 hr {
   margin: 0px 40px;
   border: 1px solid var(--card-border);
-  
 }
-
 
 body:not(.dark-theme) hr {
   display: none;
@@ -99,9 +91,9 @@ body:not(.dark-theme) hr {
 }
 
 .text-xxl {
-  font-size: 3.8rem;
+  font-size: 4rem;
   font-weight: 500;
-  margin: 70px 0px 24px 0px;
+  margin: 100px 0px 50px 0px;
 }
 .text-xl {
   font-size: 3rem;
@@ -114,7 +106,7 @@ body:not(.dark-theme) hr {
 .text-body {
   font-size: 1.3rem;
   font-weight: normal;
-  margin: 10px 0px 5px 0px;
+  margin: 10px 0px 30px 0px;
 }
 
 .subtitle-color {
@@ -127,7 +119,8 @@ body:not(.dark-theme) hr {
   justify-content: space-between;
   align-items: center;
 
-  background-color: var(--nav-bg);
+  background-color: var(--bg-color);
+  backdrop-filter: blur(100px);
   padding: 10px 24px;
   max-width: 1200px;
   margin: 0px auto;
@@ -188,6 +181,9 @@ body:not(.dark-theme) hr {
 }
 
 /* Hero section */
+.hero-texts {
+  margin-top: 40px;
+}
 .hero-content {
   display: flex;
 }
@@ -204,14 +200,14 @@ body:not(.dark-theme) hr {
 
 .download-buttons {
   display: inline-flex;
-  gap: 10px;
+  gap: 30px;
 }
 .store-button {
   background-color: var(--dark-button);
   display: flex;
   color: var(--inverse-text);
   border-radius: 16px;
-  padding: 10px 13px;
+  padding: 10px 25px 10px 13px;
   gap: 10px;
   font-weight: 500;
   font-size: 1.15rem;
@@ -237,7 +233,7 @@ body:not(.dark-theme) hr {
   );
   color: var(--inverse-text);
   font-weight: bold;
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   display: inline-block;
   padding: 4.5px 14px 4.4px 16px;
   border-radius: 17px;
@@ -260,9 +256,11 @@ body:not(.dark-theme) hr {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-flow: dense;
-  gap: 10px;
-  align-items: start;
+  gap: 20px;
+  /* align-items: start; */
   justify-content: center;
+  max-width: 1200px;
+  margin: 50px auto 50px auto;
 }
 
 .feature-card {
@@ -280,6 +278,9 @@ body:not(.dark-theme) hr {
 .feature-card img {
   border-radius: 15px;
   margin-bottom: 7px;
+
+  aspect-ratio: 4/3;
+  object-fit: cover;
 }
 .feature-card .feature-title {
   font-weight: 500;
@@ -347,6 +348,60 @@ body:not(.dark-theme) hr {
   color: var(--muted);
 }
 
+/* Download section */
+.download {
+  padding: 10px 24px 70px 24px;
+}
+.download-card {
+  max-width: 1000px;
+  margin: 0px auto;
+  background: linear-gradient(
+    to left top,
+    var(--bookmark-start),
+    var(--bookmark-end)
+  );
+
+  padding: 40px;
+  text-align: center;
+  border-radius: 40px;
+}
+.download-card .store-button {
+  background: var(--always-dark-button);
+}
+.download-card .star-span {
+  color: rgba(255, 255, 0, 0.952);
+  text-shadow: 0px 0px 1px black;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 10px 40px 30px 40px;
+
+  /* justify-content: ; */
+}
+
+.footer ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+
+  align-content: center;
+  align-self: center;
+  justify-content: space-evenly;
+  max-width: 400px;
+  margin: 0px auto;
+}
+.footer ul li {
+  color: var(--muted);
+  transition: 0.2s;
+}
+.footer ul li:hover {
+  color: var(--text-color);
+}
+
 /* Mobile */
 @media (max-width: 767px) {
   .ratings-grid {
@@ -375,6 +430,7 @@ body:not(.dark-theme) hr {
   #navbar ul {
     gap: 20px;
   }
+
   .text-xxl {
     font-size: 3.8rem;
     font-weight: 500;
@@ -385,8 +441,85 @@ body:not(.dark-theme) hr {
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-color: var(--nav-bg);
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
   }
-  #navbar ul li:nth-child(3){
+  #navbar ul li:nth-child(3) {
     display: none;
+  }
+  .hero-texts {
+    margin-top: 0px;
+  }
+}
+
+/* Privacy policy styling */
+.policy {
+  padding: 36px;
+  border-radius: 12px;
+  margin: 10px auto;
+  max-width: 900px;
+  color: var(--text-color);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  border: 2px solid rgba(0, 0, 0, 0.04);
+}
+
+
+body.dark-theme .policy {
+  border: 2px solid rgba(255, 255, 255, 0.03);
+  box-shadow: none;
+}
+
+.policy header {
+  margin-bottom: 18px;
+}
+.policy .policy-lead {
+  margin: 8px 0 0 0;
+  line-height: 1.55;
+}
+.policy .policy-meta {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.policy-section,
+.policy-section {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 2px dashed rgba(0, 0, 0, 0.04);
+}
+body.dark-theme .policy-section + .policy-section {
+  border-top-color: rgba(255, 255, 255, 0.03);
+}
+
+.policy-section h2 {
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+}
+.policy-section p,
+.policy-section li {
+  color: var(--subtitle-color, var(--heavy-text-color));
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.policy-section ul {
+  margin: 10px 0 0 1.1rem;
+  list-style: disc;
+}
+
+.policy-footer {
+  margin-top: 26px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.03);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 767px) {
+  .policy {
+    padding: 20px;
+    margin: 20px 12px;
   }
 }
