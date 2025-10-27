@@ -404,6 +404,10 @@ body:not(.dark-theme) hr {
 
 /* Mobile */
 @media (max-width: 767px) {
+  .policy {
+    padding: 0px 20px 0px 20px;
+    margin: 20px 0px;
+  }
   .ratings-grid {
     margin-top: 50px;
     display: flex;
@@ -457,9 +461,9 @@ body:not(.dark-theme) hr {
     align-items: center;
     gap: 20px;
   }
-   .download-card .store-button{
+  .download-card .store-button {
     min-width: 150px;
-   }
+  }
 }
 
 /* Privacy policy styling */
@@ -520,14 +524,13 @@ body.dark-theme .policy-section + .policy-section {
 .policy-footer {
   margin-top: 26px;
   padding-top: 12px;
-  border-top: 1px solid rgba(0, 0, 0, 0.03);
+  border-top: 2px solid rgba(0, 0, 0, 0.03);
   color: var(--muted);
   font-size: 0.95rem;
 }
 
-@media (max-width: 767px) {
-  .policy {
-    padding: 20px;
-    margin: 20px 12px;
-  }
+.policy a {
+  color: var(--primary-color);
+  font-weight: 500;
+  cursor: pointer;
 }
